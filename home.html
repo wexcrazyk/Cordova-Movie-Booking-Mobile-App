@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- cordova script here -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/geturi.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Martine</title>
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- magnific CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/gijgo.min.css">
+    <!-- niceselect CSS -->
+    <link rel="stylesheet" href="css/nice-select.css">
+    <!-- slick CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        var fetch = localStorage.getItem('username');
+    </script>
+</head>
+
+<body>
+   <!--::header part start::-->
+   <header class="main_menu">
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <a class="navbar-brand" href="profile.html"> <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="home.html">Movies</a>
+                                    </li>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="tickets.html">Tickets</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+
+    <!-- banner part 
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="banner_text text-center">
+                        <div class="banner_text_iner">
+                        </div>
+                        <a href="booking.html" class="btn_1">Buy Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    banner part start-->
+
+    <!--event start-->
+    <section class="event_part section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="event_slider owl-carousel" >
+                        <div class="single_event_slider">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-6 col-md-6">
+                                        <div class="section_tittle text-center">
+                                                <h2>Now Showing</h2>
+                                        </div>
+                                    <div class="event_slider_content" id="ftr">
+                                        <script>
+                                            $('#ftr').html("<img src = 'https://wexpushy.xyz/project/img/featured1.jpg'>");
+                                        </script>
+                                        <span>Rating : </span>
+                                        <div class="place_review">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>                          
+                                        </div>
+                                        <center>
+                                        <a href="booking.html" class="btn_1" onclick="store1()">Buy Ticket</a>
+                                        <script>
+                                            function store1(){
+                                            localStorage.setItem('movid','1');
+                                        }
+                                        </script>
+                                    </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_event_slider">
+                            <div class="row justify-content-end">
+                                <div class="ol-lg-6 col-md-6">
+                                        <div class="section_tittle text-center">
+                                                <h2>Now Showing</h2>
+                                        </div>
+                                    <div class="event_slider_content" id="ftr2">
+                                        <script>
+                                                $('#ftr2').html("<img src = 'https://wexpushy.xyz/project/img/featured2.jpg'>");
+                                        </script>
+                                        <span>Rating : </span>
+                                        <div class="place_review">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>                          
+                                        </div>                                        
+                                        <center>
+                                        <a href="booking.html" class="btn_1" onclick="store2()">Buy Ticket</a>
+                                        <script>
+                                                function store2(){
+                                                localStorage.setItem('movid','2');
+                                            }
+                                            </script>
+                                    </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_event_slider">
+                            <div class="row justify-content-end">
+                                <div class="ol-lg-6 col-md-6">
+                                        <div class="section_tittle text-center">
+                                                <h2>Now Showing</h2>
+                                        </div>
+                                    <div class="event_slider_content" id="ftr3">
+                                        <script>
+                                                $('#ftr3').html("<img src = 'https://wexpushy.xyz/project/img/featured3.jpg'>");
+                                        </script>
+                                        <span>Rating : </span>
+                                        <div class="place_review">
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>
+                                            <a href="#"><i class="fas fa-star"></i></a>                         
+                                        </div>                                        
+                                        <center>
+                                        <a href="booking.html" class="btn_1" onclick="store3()">Buy Ticket</a>
+                                        <script>
+                                                function store3(){
+                                                localStorage.setItem('movid','3');
+                                            }
+                                            </script>
+                                    </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--event end-->
+
+    <!-- Mid Buffer Start-->
+    <section class="best_services section_padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="section_tittle text-center">
+                            <h2>Movies Trailer</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single_ihotel_list">
+                            <div class="hotel_text_iner">
+                            </div>
+                            <iframe width="330" height="315"
+                                src="https://www.youtube.com/embed/RH2BD49sEZI">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single_ihotel_list">
+                            <div class="hotel_text_iner">
+                            </div>
+                            <iframe width="330" height="315"
+                                src="https://www.youtube.com/embed/2QFBZgAZx7g">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single_ihotel_list">
+                            <div class="hotel_text_iner">
+                            </div>
+                            <iframe width="330" height="315"
+                                src="https://www.youtube.com/embed/n0OFH4xpPr4">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Mid Buffer End -->
+
+    <!-- Upcoming start -->
+    <section class="event_part section_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="event_slider owl-carousel" >
+                            <div class="single_event_slider">
+                                <div class="row justify-content-end">
+                                    <div class="col-lg-6 col-md-6">
+                                            <div class="section_tittle text-center">
+                                                    <h2>Coming Soon</h2>
+                                            </div>
+                                        <div class="event_slider_content" id="up">
+                                            <script>
+                                                $('#up').html("<img src = 'https://wexpushy.xyz/project/img/upcoming1.jpg'>");
+                                            </script>
+                                            <p>Release Date: <span>26 Oct 2019</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_event_slider">
+                                <div class="row justify-content-end">
+                                    <div class="ol-lg-6 col-md-6">
+                                            <div class="section_tittle text-center">
+                                                    <h2>Coming Soon</h2>
+                                            </div>
+                                        <div class="event_slider_content" id="up2">
+                                            <script>
+                                                $('#up2').html("<img src = 'https://wexpushy.xyz/project/img/upcoming2.jpg'>");
+                                            </script>
+                                            <p>Release Date: <span>6 Nov 2019</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_event_slider">
+                                <div class="row justify-content-end">
+                                    <div class="ol-lg-6 col-md-6">
+                                            <div class="section_tittle text-center">
+                                                    <h2>Coming Soon</h2>
+                                            </div>
+                                        <div class="event_slider_content" id="up3">
+                                            <script>
+                                                $('#up3').html("<img src = 'https://wexpushy.xyz/project/img/upcoming3.png'>");
+                                            </script>
+                                            <p>Release Date: <span>21 Nov 2019</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Upcoming End -->
+
+    <!-- footer part start -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="copyright_part text-center">
+                        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0 -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This App Is Powered By  <a href="https://wexpushy.xyz" target="_blank">Joshue Cabalida</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- magnific js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- masonry js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- masonry js -->
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <!-- contact js -->
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/contact.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
